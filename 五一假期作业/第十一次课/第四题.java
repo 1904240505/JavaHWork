@@ -1,11 +1,11 @@
-package µÚ11´Î¿Î;
+package ç¬¬11æ¬¡è¯¾;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class µÚËÄÌâ {
+public class ç¬¬å››é¢˜ {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<String> name = new ArrayList<String>();
