@@ -8,23 +8,23 @@ import java.io.PrintWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ÔËËãÓëÎÄ¼þ½áºÏ {
+public class è¿ç®—ä¸Žæ–‡ä»¶ç»“åˆ {
 	public static void main(String[] args) {
 		try {
-			// ¶ÁÈ¡ÎÄ¼þ
-			File afile = new File("d:/class/ÔËËãÌâÄ¿.txt");
+			// è¯»å–æ–‡ä»¶
+			File afile = new File("d:/class/è¿ç®—é¢˜ç›®.txt");
 			FileReader fr = new FileReader(afile);
 			BufferedReader br = new BufferedReader(fr);
 
-			// Ð´ÈëÎÄ¼þ
-			File bfile = new File("d:/class/ÔËËã½á¹û.txt");
+			// å†™å…¥æ–‡ä»¶
+			File bfile = new File("d:/class/è¿ç®—ç»“æžœ.txt");
 			FileWriter fw = new FileWriter(bfile);
 			PrintWriter pw = new PrintWriter(fw);
 
 			String express = "";
 			while ((express = br.readLine()) != null) {
 //				System.out.println(express);
-				String regex = "((add)|(sub)|(max)|(min)|(doubleMe))\\(\\d{1,}(,\\d{1,})?\\)";
+				String regex = "((add)|(sub)|(max)|(min)|(doubleMe)|(muti)|(div))\\(\\d{1,}(,\\d{1,})?\\)";
 
 				Pattern p = Pattern.compile(regex);
 				Matcher m = p.matcher(express);
@@ -40,7 +40,7 @@ public class ÔËËãÓëÎÄ¼þ½áºÏ {
 					m = p.matcher(express2);
 				}
 				pw.println(express + "=" + result);
-				System.out.println(express + "=" + result);
+//				System.out.println(express + "=" + result);
 			}
 			br.close();
 			fr.close();
@@ -79,6 +79,12 @@ public class ÔËËãÓëÎÄ¼þ½áºÏ {
 				break;
 			case "min":
 				result = String.valueOf(a1 > a2 ? a2 : a1);
+				break;
+			case "muti":
+				result = String.valueOf(a1 * a2);
+				break;
+			case "div":
+				result = String.valueOf(a1 / a2);
 				break;
 			}
 		}
